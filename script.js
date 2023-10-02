@@ -72,6 +72,3 @@ document.addEventListener('DOMContentLoaded', function() {
 
     setInterval(datum, 1000);
 });
-
-
-g
