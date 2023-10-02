@@ -20,8 +20,8 @@ document.addEventListener('DOMContentLoaded', function() {
     saintPetersburg.textContent = `SAINT-PETERSBURG: ${jour}/${mois}/${annee} ${heure +3} hours ${min} minutes ${seconde} secs`;
     }
 
-    let paragraph = document.getElementById('p5');
-    let submit = document.getElementById('submit');
+    const paragraph = document.getElementById('p5');
+    const submit = document.getElementById('submit');
 
     submit.addEventListener('click', calcTime);
 
@@ -61,9 +61,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         hoursInput.addEventListener('input', function() {
-            const hours = parseInt(hoursInput.value);
+            let hours = parseInt(hoursInput.value);
             if (!isNaN(hours) && hours >= 0) {
-                const futureDate = calculateFutureDate(hours);
+                let futureDate = calculateFutureDate(hours);
                 futureDateOutput.textContent = futureDate;
             } else {
                 futureDateOutput.textContent = 'Invalid input';
